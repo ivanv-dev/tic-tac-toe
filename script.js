@@ -54,6 +54,44 @@ const play = (position, player) => {
 return {play}
 })();
 
+
+const DOMController = (() => {
+
+    const firstPlayerSignChoice = document.querySelector('.first-player-sign');
+    const secondPlayerSignChoice = document.querySelector('.second-player-sign');
+
+    const cells = document.querySelectorAll('.cell');
+    const firstPlayerSigns = document.querySelectorAll('.first .signs .sign');
+
+    chooseSign = (player) => {
+
+    }
+
+    const initiateCellsListener = (player) => {
+        cells.forEach(cell => {
+            cell.addEventListener('click', e => {
+                if(e.target.textContent == ''){
+                e.target.textContent = `${player.sign}`;
+                }
+            })
+        })
+    }
+
+    const setFirstPlayerSigns = (player) => {
+        firstPlayerSigns.forEach(sign => {
+            sign.addEventListener('click', e => {
+                console.log(e.target.textContent)
+                player.sign = e.target.textContent;
+                console.log(player)
+            })
+        })
+    }
+return {initiateCellsListener, setFirstPlayerSigns};
+})();
+
+
+
+
 const Player = (username, sign) => {
     let score = 0;
     const incrementScore = () => {score++;};
@@ -62,7 +100,9 @@ const Player = (username, sign) => {
     return {username, sign, incrementScore, getScore};
 };
 
-const mike = Player('mike97', 'x');
 
+const mike = Player('mike97', 'x');
 Gameboard.play(2, mike);
 Gameboard.play(3, mike);
+DOMController.setFirstPlayerSigns(mike);
+DOMController.initiateCellsListener(mike);
