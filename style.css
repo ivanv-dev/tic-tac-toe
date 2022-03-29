@@ -2,3 +2,66 @@
     margin: 0;
     padding: 0;
 }
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    flex-direction: column;
+}
+
+.players{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10rem;
+    color: whitesmoke;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    width: 100%
+}
+.signs{
+    display: flex;
+    justify-content: space-around;
+    font-size: 5rem;
+}
+
+.sign:hover{
+    cursor: pointer;
+    color: salmon;
+}
+
+
+.gameboard{
+    border: 6px solid salmon;
+    display: grid;
+    grid-template: repeat(3, minmax(200px, 1fr)) / repeat(3, minmax(200px, 1fr));
+}
+
+.cell {
+    background-color: skyblue;
+    border: 6px solid salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: salmon;
+}
+
+.cell:hover {
+    background-color: skyblue;
+    border: 6px solid salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: salmon;
+    cursor: pointer;
+}
