@@ -42,7 +42,7 @@
 }
 
 .cell {
-    background-color: skyblue;
+    background-color: rgb(135, 235, 218);
     border: 6px solid salmon;
     display: flex;
     justify-content: center;
