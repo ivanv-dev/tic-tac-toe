@@ -37,7 +37,7 @@
 
 .gameboard{
     border: 6px solid salmon;
-    display: grid;
+    display: none;
     grid-template: repeat(3, minmax(200px, 1fr)) / repeat(3, minmax(200px, 1fr));
 }
 
